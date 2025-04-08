@@ -1,0 +1,69 @@
+<div class="main-content-inner">
+  <div class="main-content-wrap">
+    <div class="flex items-center flex-wrap justify-between gap20 mb-27">
+      <h3>Category information</h3>
+      <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+        <li><a href="/admin"><div class="text-tiny">Dashboard</div></a></li>
+        <li><i class="icon-chevron-right"></i></li>
+        <li><a href="/admin/categories"><div class="text-tiny">Categories</div></a></li>
+        <li><i class="icon-chevron-right"></i></li>
+        <li><div class="text-tiny">New Category</div></li>
+      </ul>
+    </div>
+
+    <div class="wg-box">
+      <form class="form-new-product form-style-1" [formGroup]="categoryForm" (ngSubmit)="handleSubmit()">
+        <fieldset class="name">
+          <div class="body-title">
+            Category Name <span class="tf-color-1">*</span>
+          </div>
+          <input class="flex-grow" type="text" placeholder="Category name" formControlName="name" />
+          <div *ngIf="categoryForm.get('name')?.hasError('required') && categoryForm.get('name')?.touched" class="error-message">
+            Name is required
+          </div>
+        </fieldset>
+        
+        <fieldset class="name">
+          <div class="body-title">
+            Category Slug <span class="tf-color-1">*</span>
+          </div>
+          <input class="flex-grow" type="text" placeholder="Category Slug" formControlName="slug" />
+          <div *ngIf="categoryForm.get('slug')?.hasError('required') && categoryForm.get('slug')?.touched" class="error-message">
+            Slug is required
+          </div>
+        </fieldset>
+      
+        <fieldset>
+          <div class="body-title">
+            Upload images <span class="tf-color-1">*</span>
+          </div>
+          <div class="upload-image flex-grow">
+            <div *ngIf="previewImage" class="item" id="imgpreview">
+              <img [src]="previewImage" class="effect8" alt="Preview" style="max-width: 200px; border-radius: 10px" />
+            </div>
+            <div id="upload-file" class="item up-load">
+              <label class="uploadfile" htmlFor="myFile">
+                <span class="icon"><i class="icon-upload-cloud"></i></span>
+                <span class="body-text">
+                  Drop your images here or select
+                  <span class="tf-color">click to browse</span>
+                </span>
+                <input type="file" id="myFile" accept="image/*" (change)="handleImageChange($event)" />
+              </label>
+              <div *ngIf="categoryForm.get('image')?.hasError('required') && categoryForm.get('image')?.touched" class="error-message">
+                Image is required
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        
+      
+        <div class="bot">
+          <div></div>
+          <button class="tf-button w208" type="submit" [disabled]="categoryForm.invalid">Save</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>

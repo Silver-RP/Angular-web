@@ -1,0 +1,36 @@
+<Head [title]="'My Account'"></Head>
+
+<div class="col-lg-12">
+  <ul class="account-nav">
+    <li>
+      <a routerLink="/client/my-account" class="menu-link menu-link_us-s">
+        Dashboard
+      </a>
+    </li>
+    <li>
+      <a routerLink="/client/orders-history" class="menu-link menu-link_us-s">
+        Orders
+      </a>
+    </li>
+    <li>
+      <a routerLink="/client/account-address" class="menu-link menu-link_us-s">
+        Addresses
+      </a>
+    </li>
+    <li>
+      <a routerLink="/client/account-details" class="menu-link menu-link_us-s">
+        Account Details
+      </a>
+    </li>
+    <li>
+      <a routerLink="/client/wishlist" class="menu-link menu-link_us-s">
+        Wishlist
+      </a>
+    </li>
+    <li>
+      <button (click)="handleLogout()" class="btn btn-logout mt-5 bg-black text-white">
+        Logout
+      </button>
+    </li>
+  </ul>
+</div>

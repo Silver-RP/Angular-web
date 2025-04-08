@@ -1,0 +1,47 @@
+.search-popup {
+    padding: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer !important;
+  }
+  
+  .search-popup__input {
+    width: 100%;
+  }
+  
+  .search-popup__submit {
+    position: absolute;
+    right: 35px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-popup__reset {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-popup__results {
+    margin-top: 10px;
+  }
+  
+  .sub-menu__list {
+    padding: 0;
+  }
+  
+  .sub-menu__item {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+  .sub-menu__item:hover {
+    background: #f5f5f5;
+  }
+  

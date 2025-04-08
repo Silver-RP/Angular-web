@@ -1,0 +1,68 @@
+<section class="products-carousel container">
+  <h2 class="h3 text-uppercase mb-4 pb-xl-2 mb-xl-4">
+    Related <strong>Products</strong>
+  </h2>
+
+  <div id="related_products" class="position-relative">
+    <div *ngIf="loading" class="text-center">Loading...</div>
+    <div *ngIf="error" class="text-danger text-center">{{ error }}</div>
+
+    <!-- Swiper container -->
+    <swiper-container *ngIf="products.length > 0" #swiperEl>
+      <swiper-slide *ngFor="let product of products">
+        <div class="product-card" (mouseenter)="hoveredProduct = product._id" (mouseleave)="hoveredProduct = ''">
+          <div class="pc__img-wrapper position-relative">
+            <a [routerLink]="['/client/details', product._id]">
+              <img
+                loading="lazy"
+                [src]="product.images[0][0] 
+                  ? 'http://localhost:3000/app/assets/images/products/' + product.images[0] 
+                  : '/default-image.jpg'"
+                width="330"
+                height="400"
+                [alt]="product.name"
+                class="pc__img"
+              />
+            </a>
+
+            <button 
+              class="btn btn-primary add-to-cart-btn position-absolute"
+              [class.d-block]="hoveredProduct === product._id"
+              [class.d-none]="hoveredProduct !== product._id"
+              (click)="addToCart(product)">
+              Add To Cart
+            </button>
+          </div>
+          
+          <div class="pc__info">
+            <p class="pc__category">{{ product.productCate }}</p>
+            <h6 class="pc__title">
+              <a [routerLink]="['/client/details', product._id]">{{ product.name }}</a>
+            </h6>
+            <div class="product-card__price">
+              <span class="money price text-red me-2">${{ product.salePrice }}</span>
+              <del *ngIf="product.salePrice < product.price">${{ product.price }}</del>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- Navigation buttons -->
+    <div id="related-prev"
+      class="products-carousel__prev position-absolute d-flex align-items-center justify-content-center"
+      style="top: 50%; transform: translateY(-50%); left: -40px; cursor: pointer;">
+      <svg width="25" height="25" viewBox="0 0 25 25">
+        <use href="#icon_prev_md" />
+      </svg>
+    </div>
+
+    <div id="related-next"
+      class="products-carousel__next position-absolute d-flex align-items-center justify-content-center"
+      style="top: 50%; transform: translateY(-50%); right: -40px; cursor: pointer;">
+      <svg width="25" height="25" viewBox="0 0 25 25">
+        <use href="#icon_next_md" />
+      </svg>
+    </div>
+  </div>
+</section>

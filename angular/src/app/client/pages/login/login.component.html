@@ -1,0 +1,65 @@
+<main class="pt-60 pb-5">
+  <div class="mb-4 pb-4"></div>
+  <section class="login-register container" style="max-width: 500px">
+    <ul class="nav nav-tabs mb-5">
+      <li><h3>Login</h3></li>
+    </ul>
+
+    <p *ngIf="alertMessage" class="text-red">{{ alertMessage }}</p>
+
+    <div class="login-form">
+      <form [formGroup]="loginForm" (ngSubmit)="handleSubmitLogin()">
+        <div class="mb-3">
+          <label for="email" class="mb-2">Email address <span class="text-red">*</span></label>
+          <input
+            id="email"
+            class="form-control form-control_gray"
+            formControlName="email"
+            type="email"
+            required
+            autocomplete="email"
+            autofocus
+          />
+        </div>
+
+        <div class="mb-3 position-relative">
+          <label for="password" class="mb-2">Password <span class="text-red">*</span></label>
+          <input
+            id="password"
+            class="form-control form-control_gray"
+            formControlName="password"
+            [type]="showPassword ? 'text' : 'password'"
+            required
+            autocomplete="current-password"
+          />
+          <span (click)="togglePasswordVisibility()">
+            <i class="fa-solid" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+              [ngStyle]="{
+                cursor: 'pointer',
+                position: 'absolute',
+                right: '15px',
+                top: '68%',
+                transform: 'translateY(-50%)',
+                color: 'black',
+                backgroundColor: '#fff',
+                padding: '2px'
+              }"
+            ></i>
+          </span>
+        </div>
+
+        <button class="btn btn-primary bg-black w-100 text-uppercase" type="submit" [disabled]="loginForm.invalid">
+          Log In
+        </button>
+
+        <div class="customer-option mt-4 text-center">
+          <span class="text-secondary">No account yet?</span>
+          <a routerLink="/client/register" class="btn-text ms-2 text-black">Create Account</a>
+          <p class="m-1 fw-bold">OR</p>
+          <span class="text-secondary">Forgot Password?</span>
+          <a routerLink="/client/forgot-password" class="btn-text ms-2 text-black">Forgot Password</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

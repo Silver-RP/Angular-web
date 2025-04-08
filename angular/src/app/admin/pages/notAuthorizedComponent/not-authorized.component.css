@@ -1,0 +1,42 @@
+.not-authorized-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .message-box {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-box h1 {
+    color: #dc3545;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .message-box p {
+    color: #6c757d;
+    margin-bottom: 24px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #4f4f4f;
+  }
+  

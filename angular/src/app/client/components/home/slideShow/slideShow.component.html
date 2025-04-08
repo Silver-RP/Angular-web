@@ -1,0 +1,21 @@
+<section class="slideshow">
+  <!-- Make sure to import Swiper CSS in your styles -->
+  <swiper-container #swiper init="false">
+    <swiper-slide *ngFor="let slide of slides">
+      <div class="slide-content d-flex flex-row-reverse align-items-center justify-content-between">
+        <div class="slideshow-image-container">
+          <img [src]="slide.imgSrc" [alt]="slide.subtitle" class="slideshow-image img-fluid" />
+        </div>
+        <div class="slideshow-text-container">
+          <div class="label" *ngIf="slide.label">
+            <p class="text-uppercase font-sofia">{{slide.label}}</p>
+          </div>
+          <h6 class="text-uppercase fs-base">New Arrivals</h6>
+          <h2 class="fw-normal slide-title">{{slide.title}}</h2>
+          <h3 class="fw-bold slide-title">{{slide.subtitle}}</h3>
+          <a href="#" class="btn btn-light">Shop Now</a>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>

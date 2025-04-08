@@ -1,0 +1,23 @@
+<nav class="pagination-container">
+  <button 
+    class="btn" 
+    [disabled]="currentPage === 1" 
+    (click)="onPageChange(Math.max(currentPage - 1, 1))">
+    PREV
+  </button>
+
+  <button 
+    *ngFor="let page of [].constructor(totalPages); let i = index" 
+    class="page-btn" 
+    [ngClass]="{'active': i + 1 === currentPage}" 
+    (click)="onPageChange(i + 1)">
+    {{ i + 1 }}
+  </button>
+
+  <button 
+    class="btn" 
+    [disabled]="currentPage === totalPages" 
+    (click)="onPageChange(Math.min(currentPage + 1, totalPages))">
+    NEXT
+  </button>
+</nav>

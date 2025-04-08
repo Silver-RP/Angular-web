@@ -1,0 +1,48 @@
+<div class="header-tools__item hover-container" [ngClass]="{'js-content_visible': isSearchOpen}">
+  <div class="js-hover__open position-relative" style="margin-right: 15px;">
+    <a (click)="toggleSearch()" class="js-search-popup search-field__actor">
+      <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <use href="#icon_search"></use>
+      </svg>
+      <i *ngIf="isSearchOpen" class="btn-icon btn-close-lg"></i>
+    </a>
+  </div>
+
+  <div *ngIf="isSearchOpen" class="search-popup js-hidden-content">
+    <form (submit)="searchAndShowResults()" class="search-field container">
+      <p class="text-uppercase text-secondary fw-medium mb-4">What are you looking for?</p>
+      
+      <div class="position-relative">
+        <input class="search-field__input search-popup__input w-100 fw-medium"
+          type="text"
+          [(ngModel)]="keyword"
+          name="searchKeyword"
+          (input)="onSearchChange()"
+          placeholder="Search products" />
+        
+        <button type="submit" class="btn-icon search-popup__submit">
+          <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon_search"></use>
+          </svg>
+        </button>
+        
+        <button type="button" class="btn-icon btn-close-lg search-popup__reset" (click)="clearSearch()"></button>
+      </div>
+
+      <div *ngIf="showSearchResults" class="search-popup__results">
+        <div *ngIf="products.length > 0" class="sub-menu search-suggestion">
+          <h6 class="sub-menu__title fs-base">Results</h6>
+          <ul class="sub-menu__list list-unstyled">
+            <li class="sub-menu__item" *ngFor="let product of products" (click)="goToProduct(product._id)">
+              <a class="menu-link menu-link_us-s">{{ product.name }}</a>
+            </li>
+          </ul>
+        </div>
+
+        <p *ngIf="products.length === 0" class="">Not Products Found</p>
+      </div>
+    </form>
+  </div>
+</div>

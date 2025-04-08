@@ -1,0 +1,35 @@
+.pc__img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .add-to-cart-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Nút trải ngang hết ảnh */
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+  }
+  
+  .pc__img-wrapper:hover .add-to-cart-btn {
+    opacity: 1;
+    visibility: visible;
+    background-color: #f8f6f6; /* Màu xám khi hover */
+    color: black;
+  }
+
+  .add-to-cart-btn:hover {
+    background-color: #b0aeae !important; /* Màu xám khi hover */
+    color: black;
+  }
+  

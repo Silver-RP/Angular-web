@@ -1,0 +1,28 @@
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .success {
+    background-color: green;
+  }
+  
+  .error {
+    background-color: red;
+  }
+  
+  .warning {
+    background-color: orange;
+  }
+  
+  .info {
+    background-color: blue;
+  }
+  

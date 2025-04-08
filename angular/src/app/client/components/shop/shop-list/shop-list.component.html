@@ -1,0 +1,82 @@
+<div class="shop-list flex-grow-1">
+  <div class="d-flex justify-content-between mb-4 pb-md-2">
+    <div class="breadcrumb mb-0 d-none d-md-block flex-grow-1">
+      <a routerLink="/" class="menu-link text-uppercase fw-medium">Home</a>
+      <span class="breadcrumb-separator menu-link fw-medium px-1">/</span>
+      <a routerLink="/shop" class="menu-link text-uppercase fw-medium">The Shop</a>
+    </div>
+
+    <div class="shop-acs d-flex align-items-center">
+      <select class="form-select w-auto border-0 py-0" (change)="changeSort($event)">
+        <option value="default">Default Sorting</option>
+        <option value="featured">Featured</option>
+        <option value="name_asc">Name: A-Z</option>
+        <option value="name_desc">Name: Z-A</option>
+        <option value="price_asc">Price: Low to High</option>
+        <option value="price_desc">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="products-grid row row-cols-2 row-cols-md-3">
+    <div class="product-card-wrapper" *ngFor="let product of products">
+      <div class="product-card mb-3 mb-md-4">
+        <div class="pc__img-wrapper  position-relative">
+          <a [routerLink]="['/client/details', product._id]">
+            <img [src]="'http://localhost:3000/app/assets/images/products/' + product.images[0]" [alt]="product.name"
+              class="pc__img" width="330" height="400">
+          </a>
+          <button  class="pc__atc btn anim_appear-bottom position-absolute border-0 text-uppercase fw-medium"
+          style="color: rgb(12, 11, 11); transition: background-color 0.3s;"
+          onmouseover="this.style.backgroundColor='#f0f0f0'"
+          onmouseout="this.style.backgroundColor='#ffffff'"
+          (click)="addToCart(product)"
+          >
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="pc__info position-relative">
+          <p class="pc__category">{{ product.cateName }}</p>
+          <h6 class="pc__title">
+            <a [routerLink]="['/client/details', product._id]" class="text-black">
+              {{ product.name }}
+            </a>
+          </h6>
+          <div class="product-card__price d-flex">
+            <span class="money price text-red">${{ product.salePrice }}</span>
+            <del class="ms-3 text-secondary">${{ product.price }}</del>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <nav aria-label="Pagination">
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="!pagination.hasPrevPage">
+        <a class="page-link"
+          (click)="router.navigate([], {queryParams: { page: pagination.prevPage, sort }, queryParamsHandling: 'merge'})">
+          Previous
+        </a>
+      </li>
+
+      <li class="page-item" *ngFor="let page of getPageNumbers(); let i = index"
+        [class.active]="pagination.currentPage === page">
+        <a class="page-link"
+          (click)="router.navigate([], {queryParams: { page: page, sort }, queryParamsHandling: 'merge'})">
+          {{ page }}
+        </a>
+      </li>
+
+
+      <li class="page-item" [class.disabled]="!pagination.hasNextPage">
+        <a class="page-link"
+          (click)="router.navigate([], {queryParams: { page: pagination.nextPage, sort }, queryParamsHandling: 'merge'})">
+          Next
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

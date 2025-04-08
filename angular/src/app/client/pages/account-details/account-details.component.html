@@ -1,0 +1,149 @@
+<main>
+  <div class="mb-4 pb-4"></div>
+  <section class="my-account container">
+    <h2 class="page-title">My Account</h2>
+    <div class="row">
+      <app-my-account-sidebar></app-my-account-sidebar>
+      <div class="col-lg-9">
+        <div class="page-content my-account__edit">
+          <div class="my-account__edit-form">
+            <form [formGroup]="userForm" (ngSubmit)="handleSubmit()">
+              <div class="row">
+                <!-- Name -->
+                <div class="col-md-8 my-3">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" formControlName="name" required />
+                  <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-red">
+                    Name is required.
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-8 my-3">
+                  <label for="phone">Mobile Number</label>
+                  <input type="text" class="form-control" formControlName="phone" required />
+                  <div *ngIf="userForm.get('phone')?.hasError('required') && userForm.get('phone')?.touched"
+                    class="text-red">
+                    Phone number is required.
+                  </div>
+                  <div *ngIf="userForm.get('phone')?.hasError('pattern') && userForm.get('phone')?.touched"
+                    class="text-red">
+                    Invalid phone number format. It should be 10 digits (e.g., 1234567890).
+                  </div>
+                </div>
+
+                <!-- Email (readonly) -->
+                <div class="col-md-8 my-3">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" [value]="user?.email || ''" readonly required />
+                </div>
+
+                <div class="col-md-8 my-3">
+                  <h5 class="text-uppercase mb-0">Password Change</h5>
+                </div>
+
+                <!-- Old Password -->
+                <div class="col-md-8 my-3 position-relative">
+                  <label for="password">Old Password</label>
+                  <div class="position-relative">
+                  <input [type]="showPassword ? 'text' : 'password'" class="form-control" formControlName="password" />
+                  <span (click)="togglePasswordVisibility()">
+                    <i class="fa-solid" [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'" [ngStyle]="{
+                      cursor: 'pointer',
+                      position: 'absolute',
+                      right: '25px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      color: 'black',
+                      backgroundColor: '#fff',
+                      padding: '2px'
+                    }"></i>
+                  </span>
+                  </div>
+                  <div *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched"
+                    class="text-red">
+                    Old password is required.
+                  </div>
+                </div>
+
+                <!-- New Password -->
+                <div class="col-md-8 my-3 position-relative">
+                  <label for="new_password">New Password</label>
+                  <div class="position-relative">
+                  <input [type]="showNewPassword ? 'text' : 'password'" class="form-control"
+                    formControlName="new_password" />
+                  <span (click)="toggleNewPasswordVisibility()">
+                    <i class="fa-solid" [ngClass]="showNewPassword ? 'fa-eye-slash' : 'fa-eye'" [ngStyle]="{
+                      cursor: 'pointer',
+                      position: 'absolute',
+                      right: '25px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      color: 'black',
+                      backgroundColor: '#fff',
+                      padding: '2px'
+                    }"></i>
+                  </span>
+                  </div>
+                  <div
+                    *ngIf="userForm.get('new_password')?.hasError('required') && userForm.get('new_password')?.touched"
+                    class="text-red">
+                    New password is required.
+                  </div>
+                  <div
+                    *ngIf="userForm.get('new_password')?.hasError('minlength') && userForm.get('new_password')?.touched"
+                    class="text-red">
+                    Password must be at least 6 characters.
+                  </div>
+                  <div
+                    *ngIf="userForm.get('new_password')?.hasError('sameAsOld') && userForm.get('new_password')?.touched"
+                    class="text-red">
+                    New password cannot be the same as old password.
+                  </div>
+                </div>
+
+                <!-- Confirm New Password -->
+                <div class="col-md-8 my-3 position-relative">
+                  <label for="new_password_confirmation">Confirm New Password</label>
+                  <div class="position-relative">
+                  <input [type]="showPasswordConfirmation ? 'text' : 'password'" class="form-control"
+                    formControlName="new_password_confirmation" />
+                  <span (click)="togglePasswordConfirmationVisibility()">
+                    <i class="fa-solid" [ngClass]="showPasswordConfirmation ? 'fa-eye-slash' : 'fa-eye'" [ngStyle]="{
+                      cursor: 'pointer',
+                      position: 'absolute',
+                      right: '25px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      color: 'black',
+                      backgroundColor: '#fff',
+                      padding: '2px'
+                    }"></i>
+                  </span>
+                  </div>
+                  <div
+                    *ngIf="userForm.get('new_password_confirmation')?.hasError('required') && userForm.get('new_password_confirmation')?.touched"
+                    class="text-red">
+                    Confirm password is required.
+                  </div>
+                  <div
+                    *ngIf="userForm.get('new_password_confirmation')?.hasError('mismatch') && userForm.get('new_password_confirmation')?.touched"
+                    class="text-red">
+                    Passwords do not match.
+                  </div>
+                </div>
+
+
+                <div class="col-md-8 my-3">
+                  <button type="submit" class="btn btn-primary bg-black">
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

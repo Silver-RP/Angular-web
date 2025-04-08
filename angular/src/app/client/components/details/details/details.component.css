@@ -1,0 +1,67 @@
+.product-single__media {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; 
+  }
+  
+  .product-single__thumbnail {
+    width: 104px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-height: 450px;
+  }
+  
+  .product-single__thumbnail .swiper-container {
+    width: 100%;
+  }
+  
+  .product-single__thumbnail .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .product-single__thumbnail .swiper-slide {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .product-single__thumbnail .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .product-single__thumbnail .swiper-slide:hover {
+    border: 2px solid #ff6600; /* Màu viền khi hover */
+  }
+  
+  /* Ảnh chính */
+  .product-single__image {
+    width: 500px !important;
+    height: 674px !important;
+    position: relative;
+  }
+
+  .product-thumbs-swiper .swiper-slide img {
+    width: 500px !important;
+    height: 674px !important;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+  
+  .product-single__image .swiper-container {
+    width: 100%;
+  }
+  
+  .product-single__image .swiper-slide img {
+    width: 500px !important;
+    height: 674px !important;
+    object-fit: cover;
+  }
+  
+  
+  

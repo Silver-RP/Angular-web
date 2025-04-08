@@ -1,0 +1,48 @@
+
+
+.cate-img{
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    image-rendering: contain;
+}
+
+.swiper-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: visible !important;
+  }
+.swiper-button-prev {
+    left: -40px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 40px; 
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+
+  .swiper-button-next {
+    right: -40px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ẩn icon mặc định của Swiper */
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+  

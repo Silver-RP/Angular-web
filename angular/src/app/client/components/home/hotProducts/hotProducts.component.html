@@ -1,0 +1,66 @@
+<section class="hot-deals container mb-5">
+  <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Hot Deals</h2>
+  
+  <div class="row">
+    <!-- Cột thông tin giảm giá -->
+    <div class="col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center py-4">
+      <h2>Summer Sale</h2>
+      <h2 class="fw-bold">Up to 60% Off</h2>
+      <app-countdown [targetDate]="'2025-12-31T23:59:59'"></app-countdown>
+      <a href="#" class="btn-link default-underline text-uppercase fw-medium mt-3">
+        View All
+      </a>
+    </div>
+
+    <!-- Cột danh sách sản phẩm -->
+    <div class="col-md-6 col-lg-8 col-xl-9">
+      <swiper-container #swiperEl>
+        <swiper-slide *ngFor="let product of hotDeals">
+          <div class="product-card product-card_style3">
+            <!-- Hình ảnh sản phẩm -->
+            <div class="pc__img-wrapper-home rounded-3">
+              <a [routerLink]="['/client/details', product._id]">
+                <img
+                  loading="lazy"
+                  [src]="'http://localhost:3000/app/assets/images/products/' + product.images[0]"
+                  width="258"
+                  height="313"
+                  [alt]="product.name"
+                />
+              </a>
+            </div>
+
+            <!-- Thông tin sản phẩm -->
+            <div class="pc__info position-relative">
+              <h6 class="pc__title">
+                <a [routerLink]="['/client/details', product._id]" class="text-black">
+                  {{ product.name }}
+                </a>
+              </h6>
+              <div class="product-card__price d-flex">
+                <span class="money price text-red fw-semibold">
+                  ${{ product.salePrice }}
+                </span>
+                <del class="money price text-secondary ms-2">
+                  ${{ product.price }}
+                </del>
+              </div>
+
+              <!-- Nút thêm vào giỏ hàng và wishlist -->
+              <div class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
+                <button
+                  (click)="addToCart(product)"
+                  class="btn-link btn-link_lg me-4 text-uppercase fw-medium"
+                  title="Add To Cart"
+                >
+                  Add To Cart
+                </button>
+                <!-- <app-wishlist-button [productId]="product._id"></app-wishlist-button> -->
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</section>

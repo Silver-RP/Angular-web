@@ -1,0 +1,43 @@
+/* Slideshow.css */
+.slideshow {
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .slideshow-image-container {
+    position: relative;
+    height: 100%; /* Ensure the container takes full height */
+  }
+  
+  .slideshow-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .fs-base {
+    font-size: 1.2rem;
+  }
+  
+  .fw-medium {
+    font-weight: 500;
+  }
+  
+  .fw-normal {
+    font-weight: 400;
+  }
+  
+  .fw-bold {
+    font-weight: 700;
+  }
+  
+  .btn-link {
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  

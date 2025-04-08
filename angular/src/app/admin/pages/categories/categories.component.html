@@ -1,0 +1,64 @@
+<div class="main-content-inner">
+  <div class="main-content-wrap">
+    <div class="flex items-center flex-wrap justify-between gap20 mb-27">
+      <h3>Categories</h3>
+      <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+        <li><a routerLink="/">Dashboard</a></li>
+        <li><i class="icon-chevron-right"></i></li>
+        <li>Categories</li>
+      </ul>
+    </div>
+
+    <div class="wg-box">
+      <div class="flex items-center justify-between gap10 flex-wrap">
+        <div class="wg-filter flex-grow">
+          <form class="form-search">
+            <input type="text" placeholder="Search here..." />
+            <button type="submit"><i class="icon-search"></i></button>
+          </form>
+        </div>
+        <button class="tf-button style-1 w208" routerLink="/admin/categories/add">
+          <i class="fa-solid fa-plus"></i> Add new
+        </button>
+      </div>
+
+      <div class="wg-table table-all-user">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Slug</th>
+              <th>Products</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let category of categories; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td class="pname">
+                <div class="image">
+                  <img [src]="'http://localhost:3000/app/assets/images/home/demo3/' + category.image" [alt]="category.name" />
+                </div>
+                <div class="name">
+                  <span>{{ category.name }}</span>
+                </div>
+              </td>
+              <td>{{ category.slug }}</td>
+              <td>{{ category.productCount }}</td>
+              <td>
+                <a [routerLink]="['/admin/categories/edit', category._id]" class="mx-3 text-primary">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <button (click)="handleDeleteCategory(category._id)">
+                  <i class="fa-solid fa-trash text-danger"></i>
+                </button>
+                
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

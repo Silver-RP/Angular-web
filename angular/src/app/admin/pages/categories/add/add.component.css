@@ -1,0 +1,25 @@
+/* Định dạng lỗi chung */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+  }
+  
+  /* Định dạng input khi có lỗi */
+  input.ng-invalid.ng-touched,
+  input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+    background-color: #ffe6e6;
+  }
+  
+  /* Định dạng lỗi trong upload file */
+  .uploadfile {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .uploadfile .error-message {
+    margin-top: 8px;
+  }
+  

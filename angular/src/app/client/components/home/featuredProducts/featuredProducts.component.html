@@ -1,0 +1,56 @@
+<section class="products-grid container">
+  <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">
+    Featured Products
+  </h2>
+  <div class="row">
+    <div
+      *ngFor="let product of featuredProducts"
+      class="col-6 col-md-4 col-lg-3"
+    >
+      <div class="product-card product-card_style3 mb-3 mb-md-4 mb-xxl-5">
+        <div class="pc__img-wrapper">
+          <a [routerLink]="['/client/details', product._id]">
+            <img
+              loading="lazy"
+              [src]="'http://localhost:3000/app/assets/images/products/' + (product.images.length > 0 ? product.images[0] : '')"
+              width="330"
+              height="400"
+              [alt]="product.name"
+              class="pc__img"
+            />
+          </a>
+        </div>
+
+        <div class="pc__info position-relative">
+          <h6 class="pc__title">
+            <a [routerLink]="['/client/details', product._id]" class="text-black" style="text-decoration: none;">
+              {{ product.name }}
+            </a>
+          </h6>
+          <div class="product-card__price d-flex align-items-center">
+            <span class="money price text-red fw-semibold">
+              ${{ product.salePrice }}
+            </span>
+            <del class="money price text-secondary ms-2">
+              ${{ product.price }}
+            </del>
+          </div>
+
+          <div
+            class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body"
+          >
+            <button
+              (click)="addToCart(product)"
+              class="btn-link btn-link_lg me-4 text-uppercase fw-medium"
+              title="Add To Cart"
+            >
+              Add To Cart
+            </button>
+
+            <!-- WishlistButton chưa có trong Angular, cần tạo riêng -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

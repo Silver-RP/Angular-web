@@ -1,0 +1,62 @@
+<app-head title="Search Results"></app-head>
+
+<section class="shop-main container d-flex pt-4 pt-xl-5">
+  <app-shop-sidebar></app-shop-sidebar>
+
+
+  <div class="shop-list flex-grow-1">
+    <div class="d-flex justify-content-between mb-4 pb-md-2">
+      <div class="breadcrumb mb-0 d-none d-md-block flex-grow-1">
+        <a routerLink="/" class="menu-link menu-link_us-s text-uppercase fw-medium">Search Results:</a>
+        
+      </div>
+    </div>
+  
+    <div class="products-grid row row-cols-2 row-cols-md-3" id="products-grid">
+      <div class="product-card-wrapper" *ngFor="let product of products">
+        <div class="product-card mb-3 mb-md-4">
+          <div class="pc__img-wrapper">
+            <div class="swiper-container background-img">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let image of product.images.slice(0, 2); let i = index">
+                  <a [routerLink]="['/client/details', product._id]">
+                    <img 
+                      [src]="'http://localhost:3000/app/assets/images/products/' + image"
+                      [alt]="product.name" 
+                      class="pc__img" 
+                      width="330" 
+                      height="400"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+              <button
+                    class="pc__atc btn anim_appear-bottom position-absolute border-0 text-uppercase fw-medium"
+                    style="color: rgb(12, 11, 11); transition: background-color 0.3s;"
+                    onmouseover="this.style.backgroundColor='#f0f0f0'"
+                    onmouseout="this.style.backgroundColor='#ffffff'"
+                    (click)="addToCart(product)"
+                    >
+              Add To Cart
+            </button>
+          </div>
+  
+          <div class="pc__info position-relative">
+            <p class="pc__category">{{ product.cateName }}</p>
+            <h6 class="pc__title">
+              <a [routerLink]="['/details', product._id]" class="text-black">{{ product.name }}</a>
+            </h6>
+            <div class="product-card__price d-flex">
+              <span class="money price text-red">${{ product.salePrice }}</span>
+              <del class="ms-3 text-secondary">${{ product.price }}</del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

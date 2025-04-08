@@ -1,0 +1,89 @@
+.slideshow {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .slide-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .slideshow-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .swiper-wrapper {
+    width: 100%;
+  }
+  
+  .slideshow-image-container {
+    margin-right: 100px;
+  }
+  
+  .slideshow-text-container {
+    margin-left: 150px;
+  }
+  
+  .slideshow-text-container h6 {
+    font-size: 28px;
+  }
+  
+  .slideshow-text-container h2 {
+    font-size: 60px;
+    font-weight: 400;
+  }
+  
+  .slideshow-text-container h3 {
+    font-size: 46px;
+    font-weight: 700;
+  }
+  
+  .slideshow-text-container .label p {
+    font-size: 18px; 
+  }
+  
+  .slideshow-text-container .btn {
+    font-size: 18px; 
+    padding: 12px 24px; 
+  }
+  
+  /* Basic navigation arrow styling */
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  width: 20px;
+  height: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+swiper-container::part(button-prev):hover,
+swiper-container::part(button-next):hover {
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+swiper-container::part(button-prev) {
+  left: 20px;
+}
+
+swiper-container::part(button-next) {
+  right: 20px;
+}
+
+swiper-container::part(button-prev)::after,
+swiper-container::part(button-next)::after {
+  font-size: 12px;
+  font-weight: bold;
+}

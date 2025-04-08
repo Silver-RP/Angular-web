@@ -1,0 +1,106 @@
+<main class="pt-60">
+  <div class="mb-4 pb-4"></div>
+  <section class="shop-checkout container">
+    <h2 class="page-title">Cart</h2>
+
+    <div class="shopping-cart">
+      <div class="cart-table__wrapper">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th></th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cart">
+              <td>
+                <img [src]="'http://localhost:3000/app/assets/images/products/' + item.productId.images[0]" width="120" height="120" alt="{{ item.productId.name }}" />
+              </td>
+              <td>
+                <div class="shopping-cart__product-item__detail">
+                <h4>{{ item.productId.name }}</h4>
+                <ul class="shopping-cart__product-item__options">
+                  <li>Color: Yellow</li>
+                  <li>Size: L</li>
+                </ul>
+                </div>
+              </td>
+              <td>
+                <span class="shopping-cart__product-price text-red">
+                  ${{ item.productId.salePrice }}
+                </span>
+                <del class="shopping-cart__product-price fs-6">
+                  ${{ item.productId.price }}
+                </del>
+              </td>
+              <td>
+                <div class="qty-control position-relative">
+                  <button type="button" (click)="decreaseQuantity(item.productId._id, item.quantity)" class="border-0 bg-white qty-control__reduce">
+                    -
+                  </button>
+                  <input type="number" [(ngModel)]="item.quantity" (change)="updateCartQuantity(item.productId._id, item.quantity)" min="1" class="qty-control__number text-center " />
+                  <button type="button" (click)="increaseQuantity(item.productId._id, item.quantity)" class="border-0 bg-white qty-control__increase">
+                    +
+                  </button>
+                </div>
+              </td>
+              <td>
+                <span class="shopping-cart__subtotal">
+                  ${{ item.productId.salePrice * item.quantity }}
+                </span>
+              </td>
+              <td>
+                <a href="#" class="remove-cart" (click)="removeItem(item.productId._id)">
+                  <i class="fas fa-times opacity-50"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="shopping-cart__totals-wrapper">
+        <div class="shopping-cart__totals">
+          <h3>Cart Totals</h3>
+          <table class="cart-totals">
+            <tbody>
+              <tr>
+                <th>Subtotal</th>
+                <td>${{ subtotal }}</td>
+              </tr>
+              <tr>
+                <th>Shipping</th>
+                <td>
+                  <div class="form-check">
+                    <input type="radio" name="shipping" (change)="changeShipping('Free shipping', 0)" [checked]="shipping.fee === 0" />
+                    <label>Free shipping</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" name="shipping" (change)="changeShipping('Flat rate', 12)" [checked]="shipping.fee === 12" />
+                    <label>Flat rate: $12</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" name="shipping" (change)="changeShipping('Local pickup', 8)" [checked]="shipping.fee === 8" />
+                    <label>Local pickup: $8</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Total</th>
+                <td>${{ total }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button class="btn btn-primary bg-black">
+          PROCEED TO CHECKOUT
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
