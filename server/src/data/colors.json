@@ -1,0 +1,13 @@
+[
+    { "name": "blue", "hex": "#0a2472", "rgb": "10,36,114", "description": "A deep blue shade" },
+    { "name": "yellow", "hex": "#d7bb4f", "rgb": "215,187,79", "description": "A bright yellow shade" },
+    { "name": "black", "hex": "#282828", "rgb": "40,40,40", "description": "A standard black shade" },
+    { "name": "light blue", "hex": "#b1d6e8", "rgb": "177,214,232", "description": "A soft light blue color" },
+    { "name": "brown", "hex": "#9c7539", "rgb": "156,117,57", "description": "A warm brown shade" },
+    { "name": "orange", "hex": "#d29b48", "rgb": "210,155,72", "description": "A vibrant orange shade" },
+    { "name": "pink", "hex": "#e6ae95", "rgb": "230,174,149", "description": "A pastel pink shade" },
+    { "name": "red", "hex": "#d76b67", "rgb": "215,107,103", "description": "A soft red shade" },
+    { "name": "gray", "hex": "#bababa", "rgb": "186,186,186", "description": "A neutral gray shade" },
+    { "name": "green", "hex": "#bfdcc4", "rgb": "191,220,196", "description": "A calm green shade" }
+  ]
+  

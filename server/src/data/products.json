@@ -1,0 +1,522 @@
+[
+    {
+      "name": "Faux leather Jacket",
+      "cateId": "678600c158eacae1b9c4bd58", 
+      "shortDescription": "Faux leather jacket with long sleeves, lapel collar and side pockets.",
+      "description": "Faux leather jacket with long sleeves, lapel collar and side pockets. Front metal zip closure.",
+      "featured": true,
+      "hot": true
+    },
+    {
+      "name": "Calvin Shorts",
+      "cateId": "678600c158eacae1b9c4bd5b",
+      "shortDescription": "Shorts with front pockets and back welt pockets. Front zip and button closure.",
+      "description": "Shorts with front pockets and back welt pockets. Front zip and button closure.",
+      "featured": true,
+      "hot": true
+    },
+    {
+      "name": "Kirby T-Shirts",
+      "cateId": "678600c158eacae1b9c4bd5b",
+      "shortDescription": "T-shirt with round neck and short sleeves. Front print.",
+      "description": "T-shirt with round neck and short sleeves. Front print.",
+      "featured": true,
+      "hot": true
+    },
+    {
+      "name": "Cableknit Shawl11",
+      "cateId": "678600c158eacae1b9c4bd58",
+      "shortDescription": "Cable-knit shawl with fringed edges.",
+      "description": "Cable-knit shawl with fringed edges.",
+      "featured": true,
+      "hot": true
+    },
+    {
+      "name": "Colorful Jacket",
+      "cateId": "678600c158eacae1b9c4bd5a",
+      "shortDescription": "Jacket with lapel collar and long sleeves. Front welt pockets and front metal zip closure.",
+      "description": "Jacket with lapel collar and long sleeves. Front welt pockets and front metal zip closure.",
+      "featured": true,
+      "hot": false
+    },
+    {
+      "name": "Shirt In Botanical Cheetah Print",
+      "cateId": "678600c158eacae1b9c4bd5b",
+      "shortDescription": "Shirt with lapel collar and long sleeves. Front patch pockets and front button closure.",
+      "description": "Shirt with lapel collar and long sleeves. Front patch pockets and front button closure.",
+      "featured": true,
+      "hot": false
+    },
+    {
+      "name": "Cotton Jersey T-Shirt",
+      "cateId": "678600c158eacae1b9c4bd5b",
+      "shortDescription": "T-shirt with round neck and short sleeves. Front print.",
+      "description": "T-shirt with round neck and short sleeves. Front print.",
+      "featured": true,
+      "hot": false
+    },
+    {
+        "name": "Zessi Dresses",
+        "cateId": "678600c158eacae1b9c4bd56",
+        "shortDescription": "Dress with lapel collar and long sleeves. Front patch pockets and front button closure.",
+        "description": "Dress with lapel collar and long sleeves. Front patch pockets and front button closure.",
+        "featured": true,
+        "hot": false
+    },
+    {
+        "name": "Elegant Summer Dress",
+        "cateId": "678600c158eacae1b9c4bd56",
+        "shortDescription": "Flowy summer dress with a deep V-neckline.",
+        "description": "Elegant and breezy summer dress with a deep V-neckline and adjustable straps.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Cropped Faux leather Jacket",
+        "cateId": "678600c158eacae1b9c4bd5a",
+        "shortDescription": "Faux leather jacket with lapel collar and long sleeves. Front zip closure.",
+        "description": "Faux leather jacket with lapel collar and long sleeves. Front zip closure.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Stylish Denim Jacket",
+        "cateId": "678600c158eacae1b9c4bd5a",
+        "shortDescription": "Classic denim jacket with a modern twist.",
+        "description": "A timeless piece that pairs perfectly with almost anything, this denim jacket will add style to any outfit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Chic High-Waisted Shorts",
+        "cateId": "678600c158eacae1b9c4bd57",
+        "shortDescription": "High-waisted shorts with front pleats.",
+        "description": "High-waisted shorts with a flattering fit and front pleats, perfect for a casual day out.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Cozy Sweatshirt",
+        "cateId": "678600c158eacae1b9c4bd58",
+        "shortDescription": "Soft sweatshirt with ribbed cuffs.",
+        "description": "A cozy sweatshirt made from soft cotton with ribbed cuffs and a relaxed fit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Beach Swimwear Set",
+        "cateId": "678600c158eacae1b9c4bd59",
+        "shortDescription": "A comfortable and stylish swimwear set.",
+        "description": "Perfect for a day at the beach, this swimwear set is both stylish and functional.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Basic White T-Shirt",
+        "cateId": "678600c158eacae1b9c4bd5b",
+        "shortDescription": "Simple and comfortable white t-shirt.",
+        "description": "A wardrobe essential, this classic white t-shirt is made from soft cotton and offers a comfortable fit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Slim Fit Jeans",
+        "cateId": "678600c158eacae1b9c4bd5c",
+        "shortDescription": "Slim fit jeans with a comfortable stretch.",
+        "description": "These slim fit jeans are perfect for everyday wear, with a hint of stretch for extra comfort.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Tailored Trousers",
+        "cateId": "678600c158eacae1b9c4bd5d",
+        "shortDescription": "Tailored trousers with a sleek, modern cut.",
+        "description": "Sleek and modern, these trousers are designed to provide a sharp and clean look for work or formal occasions.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Casual Button-Down Shirt",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Comfortable and stylish button-down shirt.",
+        "description": "A versatile shirt perfect for casual outings or more formal occasions, with a comfortable fit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Classic Polo Shirt",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Classic polo shirt with a modern twist.",
+        "description": "A timeless piece that pairs perfectly with almost anything, this polo shirt will add style to any outfit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Stylish Sneakers",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Comfortable and stylish button-down shirt.",
+        "description": "A versatile shirt perfect for casual outings or more formal occasions, with a comfortable fit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Trendy Blazer",
+        "cateId": "678600c158eacae1b9c4bd56",
+        "shortDescription": "Modern tailored blazer with a sleek fit.",
+        "description": "A stylish and contemporary blazer designed to complement any outfit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Summer Midi Skirt",
+        "cateId": "678600c158eacae1b9c4bd56",
+        "shortDescription": "Flowy midi skirt with a flattering A-line cut.",
+        "description": "Perfect for a warm day out, this skirt is stylish and comfortable.",
+        "featured": true,
+        "hot": false
+    },
+    {
+        "name": "Athletic Hoodie",
+        "cateId": "678600c158eacae1b9c4bd57",
+        "shortDescription": "Comfy hoodie designed for active wear.",
+        "description": "Great for workouts or casual wear, this hoodie is soft and breathable.",
+        "featured": false,
+        "hot": true
+    },
+    {
+        "name": "Denim Overalls",
+        "cateId": "678600c158eacae1b9c4bd57",
+        "shortDescription": "Classic denim overalls with adjustable straps.",
+        "description": "A timeless wardrobe staple that’s both stylish and practical.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Striped T-Shirt Dress",
+        "cateId": "678600c158eacae1b9c4bd58",
+        "shortDescription": "A casual yet chic striped t-shirt dress.",
+        "description": "Comfortable and easy-to-wear, this t-shirt dress is perfect for any occasion.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Jogger Pants",
+        "cateId": "678600c158eacae1b9c4bd58",
+        "shortDescription": "Relaxed fit jogger pants with an elastic waistband.",
+        "description": "Great for lounging or running errands, these joggers combine comfort and style.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Bikini Set",
+        "cateId": "678600c158eacae1b9c4bd59",
+        "shortDescription": "Stylish bikini set in vibrant colors.",
+        "description": "Perfect for the beach or pool, this bikini set offers both style and comfort.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Beach Sarong",
+        "cateId": "678600c158eacae1b9c4bd59",
+        "shortDescription": "Lightweight sarong perfect for beach days.",
+        "description": "This colorful sarong is a great accessory for a day in the sun.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Classic Leather Jacket",
+        "cateId": "678600c158eacae1b9c4bd5a",
+        "shortDescription": "Timeless leather jacket with a smooth finish.",
+        "description": "Add a touch of edge to your wardrobe with this classic leather jacket.",
+        "featured": true,
+        "hot": false
+    },
+    {
+        "name": "Suede Boots",
+        "cateId": "678600c158eacae1b9c4bd5a",
+        "shortDescription": "Elegant suede boots with a chunky heel.",
+        "description": "These suede boots are a perfect combination of comfort and style.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Comfortable Joggers",
+        "cateId": "678600c158eacae1b9c4bd5b",
+        "shortDescription": "Soft and cozy joggers for casual wear.",
+        "description": "These joggers offer maximum comfort for relaxing at home or running errands.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Basic V-Neck T-Shirt",
+        "cateId": "678600c158eacae1b9c4bd5b",
+        "shortDescription": "A versatile v-neck t-shirt in soft cotton.",
+        "description": "This basic t-shirt is an essential wardrobe piece for any occasion.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Yoga Pants",
+        "cateId": "678600c158eacae1b9c4bd5c",
+        "shortDescription": "Stretchy yoga pants for ultimate comfort.",
+        "description": "These yoga pants offer flexibility and comfort for workouts or casual wear.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Casual Sneakers",
+        "cateId": "678600c158eacae1b9c4bd5c",
+        "shortDescription": "Comfortable sneakers for everyday wear.",
+        "description": "These casual sneakers are stylish and comfortable for daily use.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Fleece Jacket",
+        "cateId": "678600c158eacae1b9c4bd5d",
+        "shortDescription": "Soft fleece jacket perfect for layering.",
+        "description": "A warm and comfortable fleece jacket to keep you cozy on chilly days.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Plaid Shirt",
+        "cateId": "678600c158eacae1b9c4bd5d",
+        "shortDescription": "Classic plaid shirt with a comfortable fit.",
+        "description": "This plaid shirt is perfect for casual outings or layering.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Button-Down Dress",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Classic button-down dress with a flattering silhouette.",
+        "description": "This dress is perfect for both casual and formal events, offering a classic look.",
+        "featured": true,
+        "hot": false
+    },
+    {
+        "name": "Track Jacket",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Sporty track jacket with a zip closure.",
+        "description": "Ideal for exercise or casual wear, this track jacket is both functional and stylish.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Pleated Skirt",
+        "cateId": "678600c158eacae1b9c4bd5f",
+        "shortDescription": "Charming pleated skirt in soft fabric.",
+        "description": "A stylish pleated skirt perfect for both casual and formal occasions.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Luxe Satin Blouse",
+        "cateId": "678600c158eacae1b9c4bd5f",
+        "shortDescription": "Elegant satin blouse with a silky smooth feel.",
+        "description": "This luxurious blouse adds a touch of sophistication to any outfit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Classic Sneakers",
+        "cateId": "678600c158eacae1b9c4bd60",
+        "shortDescription": "Simple and comfortable sneakers for everyday use.",
+        "description": "These classic sneakers are perfect for all-day comfort and style.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Tennis Shoes",
+        "cateId": "678600c158eacae1b9c4bd60",
+        "shortDescription": "Lightweight tennis shoes designed for comfort.",
+        "description": "These tennis shoes are designed for comfort, making them ideal for sports or casual wear.",
+        "featured": false,
+        "hot": false
+    },
+[
+    {
+        "name": "Casual Button-Up Shirt",
+        "cateId": "678600c158eacae1b9c4bd56",
+        "shortDescription": "A comfortable button-up shirt for everyday wear.",
+        "description": "This shirt combines a sleek design with a casual fit, perfect for any occasion.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "High-Waisted Trousers",
+        "cateId": "678600c158eacae1b9c4bd56",
+        "shortDescription": "Tailored high-waisted trousers for a polished look.",
+        "description": "These trousers provide a flattering silhouette and can be dressed up or down.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Tech Fleece Hoodie",
+        "cateId": "678600c158eacae1b9c4bd57",
+        "shortDescription": "A hoodie made from high-performance tech fleece material.",
+        "description": "Stay warm and comfortable with this hoodie, perfect for outdoor activities.",
+        "featured": true,
+        "hot": false
+    },
+    {
+        "name": "Loose Fit Cargo Pants",
+        "cateId": "678600c158eacae1b9c4bd57",
+        "shortDescription": "Functional cargo pants with multiple pockets.",
+        "description": "These cargo pants offer both comfort and practicality for all your outdoor adventures.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Floral Print Maxi Dress",
+        "cateId": "678600c158eacae1b9c4bd58",
+        "shortDescription": "Elegant floral maxi dress for formal events.",
+        "description": "A beautiful floral print dress that flows gracefully for a feminine look.",
+        "featured": true,
+        "hot": false
+    },
+    {
+        "name": "Graphic Sweatshirt",
+        "cateId": "678600c158eacae1b9c4bd58",
+        "shortDescription": "A sweatshirt featuring bold graphic designs.",
+        "description": "This sweatshirt adds a fun, graphic touch to any casual look.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Ruffle Beach Cover-Up",
+        "cateId": "678600c158eacae1b9c4bd59",
+        "shortDescription": "Flattering beach cover-up with ruffle details.",
+        "description": "Perfect for a day by the water, this cover-up is stylish and comfortable.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Trendy Wide-Legged Pants",
+        "cateId": "678600c158eacae1b9c4bd59",
+        "shortDescription": "Chic wide-legged pants for a relaxed fit.",
+        "description": "These pants offer a stylish and comfortable alternative to traditional trousers.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Shearling Coat",
+        "cateId": "678600c158eacae1b9c4bd5a",
+        "shortDescription": "Cozy shearling coat for chilly days.",
+        "description": "This coat offers warmth and style with a plush shearling interior.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Patterned Silk Scarf",
+        "cateId": "678600c158eacae1b9c4bd5a",
+        "shortDescription": "Luxurious silk scarf with intricate patterns.",
+        "description": "Add elegance to any outfit with this soft, patterned silk scarf.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Slim-Fit Chinos",
+        "cateId": "678600c158eacae1b9c4bd5b",
+        "shortDescription": "Modern chinos with a slim fit.",
+        "description": "These slim-fit chinos are perfect for both work and casual outings.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Knit Cardigan",
+        "cateId": "678600c158eacae1b9c4bd5b",
+        "shortDescription": "Soft knit cardigan for layering.",
+        "description": "This cardigan is a cozy addition to any outfit, perfect for cooler days.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Ankle Boots",
+        "cateId": "678600c158eacae1b9c4bd5c",
+        "shortDescription": "Stylish ankle boots with a block heel.",
+        "description": "These ankle boots offer both comfort and style for everyday wear.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Baseball Cap",
+        "cateId": "678600c158eacae1b9c4bd5c",
+        "shortDescription": "Casual baseball cap for sunny days.",
+        "description": "This cap is a great accessory to keep you cool and stylish.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Quilted Vest",
+        "cateId": "678600c158eacae1b9c4bd5d",
+        "shortDescription": "Warm quilted vest for layering.",
+        "description": "This vest provides extra warmth and can be worn over a sweater or shirt.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Flannel Shirt",
+        "cateId": "678600c158eacae1b9c4bd5d",
+        "shortDescription": "Classic flannel shirt with a plaid design.",
+        "description": "This shirt is perfect for casual wear and adds a laid-back touch to any outfit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Maxi Skirt",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Elegant maxi skirt with a flowy design.",
+        "description": "This skirt is perfect for dressier occasions or adding a feminine touch to casual looks.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Lightweight Parka",
+        "cateId": "678600c158eacae1b9c4bd5e",
+        "shortDescription": "Versatile parka jacket for cooler days.",
+        "description": "This lightweight parka is perfect for layering in transitional weather.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Puffer Vest",
+        "cateId": "678600c158eacae1b9c4bd5f",
+        "shortDescription": "Lightweight puffer vest for added warmth.",
+        "description": "This vest offers warmth without the bulk, making it perfect for layering.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Pleated Pants",
+        "cateId": "678600c158eacae1b9c4bd5f",
+        "shortDescription": "Stylish pleated pants for a formal look.",
+        "description": "These pleated pants add a polished touch to any formal outfit.",
+        "featured": false,
+        "hot": false
+    },
+    {
+        "name": "Running Sneakers",
+        "cateId": "678600c158eacae1b9c4bd60",
+        "shortDescription": "Comfortable sneakers designed for running.",
+        "description": "These sneakers provide the support and comfort needed for long runs.",
+        "featured": false,
+        "hot": true
+    },
+    {
+        "name": "Mesh Sports Cap",
+        "cateId": "678600c158eacae1b9c4bd60",
+        "shortDescription": "Breathable sports cap for outdoor activities.",
+        "description": "This cap is designed to keep you cool and protected from the sun during workouts.",
+        "featured": false,
+        "hot": false
+    }
+]
+
+
+    
+
+      
+  ]
+  

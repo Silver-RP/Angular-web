@@ -1,0 +1,13 @@
+[
+    { "name": "Shorts", "slug": "cate0002", "image": "category_1.png" },
+    { "name": "Sweatshirts", "slug": "cate0003", "image": "category_2.png" },
+    { "name": "Swimwear", "slug": "cate0004", "image": "category_3.png" },
+    { "name": "Jackets", "slug": "cate0005", "image": "category_4.png" },
+    { "name": "Tops", "slug": "cate0006", "image": "category_5.png" },
+    { "name": "Jeans", "slug": "cate0007", "image": "category_6.png" },
+    { "name": "Trousers", "slug": "cate0008", "image": "category_7.png" },
+    { "name": "Shirts", "slug": "cate0009", "image": "category_8.png" },
+    { "name": "Shoes", "slug": "cate0010", "image": "category_9.png" },
+    { "name": "Jumpers & Cardigans", "slug": "cate0011", "image": "category_10.png" },
+    { "name": "Le Petit Prince -12", "slug": "cate0012", "image": "category_11.png" }
+]

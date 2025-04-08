@@ -1,0 +1,249 @@
+<div class="main-content">
+
+    <div class="main-content-inner">
+        <div class="main-content-wrap">
+            <div class="flex items-center flex-wrap justify-between gap20 mb-27">
+                <h3>All Products</h3>
+                <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+                    <li>
+                        <a href="index.html">
+                            <div class="text-tiny">Dashboard</div>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="icon-chevron-right"></i>
+                    </li>
+                    <li>
+                        <div class="text-tiny">All Products</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="wg-box">
+                <div class="flex items-center justify-between gap10 flex-wrap">
+                    <div class="wg-filter flex-grow">
+                        <form class="form-search">
+                            <fieldset class="name">
+                                <input type="text" placeholder="Search here..." class="" name="name" tabindex="2"
+                                    value="" aria-required="true" required="">
+                            </fieldset>
+                            <div class="button-submit">
+                                <button class="" type="submit"><i class="icon-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <a class="tf-button style-1 w208" href="add-product.html"><i class="icon-plus"></i>Add new</a>
+                </div>
+
+                <div>
+                     <form method="GET" action="/admin/products" id="sort-form">
+                        <select class="fs-5 shop-acs__select form-select w-auto border-0 py-0 order-1 order-md-0" aria-label="Sort Items"
+                        name="sort" id="sort-select" onchange="this.form.submit()">
+                        <option value="default" selected>Default Sorting</option>
+                        <option value="featured">Featured</option>
+                        <option value="name_asc">Name: A-Z</option>
+                        <option value="name_desc">Name: Z-A</option>
+                        <option value="price_asc">Price: Low to High</option>
+                        <option value="price_desc">Price: High to Low</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>SalePrice</th>
+                                <th>SKU</th>
+                                <th>Category</th>
+                                <th>Featured</th>
+                                <th>Quantity</th>
+                                <th>Saled Quantity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each products}}
+                            <tr>
+                                <td>{{this.number}}</td>
+                                <td class="pname">
+                                    <div class="image">
+                                        <img src="/app/assets/images/products/{{this.images.[0].[0]}}" alt=""
+                                            class="image">
+                                    </div>
+                                    <div class="name">
+                                        <a href="#" class="body-title-2">{{this.name}}</a>
+                                        {{!-- <div class="text-tiny mt-3">{{this.slug}}</div> --}}
+                                    </div>
+                                </td>
+                                <td>${{this.price}}</td>
+                                <td>${{this.salePrice}}</td>
+                                <td>{{this.SKU}}</td>
+                                <td>{{this.cateName}}</td>
+                                <td>{{this.featured}}</td>
+                                <td>{{this.quantity}}</td>
+                                <td>{{this.saledQuantity}}</td>
+                                {{!-- <td>{{this.name}}</td> --}}
+                                <td>
+                                    <div class="list-icon-function">
+                                        <a href="#" target="_blank">
+                                            <div class="item eye">
+                                                <i class="icon-eye"></i>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="item edit">
+                                                <i class="icon-edit-3"></i>
+                                            </div>
+                                        </a>
+                                        <form action="#" method="POST">
+                                            <div class="item text-danger delete">
+                                                <i class="icon-trash-2"></i>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="divider"></div>
+                    {{!-- Paginate --}}
+                    <style>
+                        .page-active {
+                            font-weight: bold;
+                            color: #920404;
+                            background-color: #f0f0f0;
+                            border-radius: 4px;
+                            pointer-events: none;
+                            text-decoration: underline;
+                        }
+
+                        .page-dim {
+                            opacity: 0.7;
+                            transition: opacity 0.3s ease;
+                        }
+
+                        .page-dim:hover {
+                            opacity: 1;
+                        }
+
+                        .btn-link.disabled {
+                            opacity: 0.5;
+                            pointer-events: none;
+                        }
+                    </style>
+                    <nav class="shop-pages d-flex fs-5 justify-content-center mt-3" aria-label="Page navigation">
+                        <!-- PREV Button -->
+                        {{#if hasPrevPage}}
+                        <a href="?page={{prevPage}}&sort={{../currentSort}}"
+                            class="btn-link d-inline-flex align-items-center">
+                            <svg class="me-1" width="7" height="11" viewBox="0 0 7 11"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use href="#icon_prev_sm" />
+                            </svg>
+                            <span class="fw-medium">PREV</span>
+                        </a>
+                        {{else}}
+                        <span class="btn-link d-inline-flex align-items-center disabled">
+                            <svg class="me-1" width="7" height="11" viewBox="0 0 7 11"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use href="#icon_prev_sm" />
+                            </svg>
+                            <span class="fw-medium">PREV</span>
+                        </span>
+                        {{/if}}
+
+                        <ul class="pagination mb-0">
+                            <!-- TOP Button -->
+                            {{#if hasPrevPage}}
+                            <a href="?page=1&sort={{../currentSort}}"
+                                class="me-3 btn-link d-inline-flex align-items-center">
+                                <span class="fw-medium">Top</span>
+                            </a>
+                            {{else}}
+                            <span class="me-3 btn-link d-inline-flex align-items-center disabled">
+                                <span class="fw-medium">Top</span>
+                            </span>
+                            {{/if}}
+
+                            {{#each pageNumbers}}
+                            {{#if (lookup ../pagesVisible this)}}
+                            <li class="page-item">
+                                <a class="btn-link px-1 mx-2 
+                                    {{#if (lookup ../currentPage this)}}page-active{{else}}page-dim{{/if}}"
+                                    href="?page={{this}}&sort={{../currentSort}}">{{this}}</a>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+
+                            <!-- END Button -->
+                            {{#if hasNextPage}}
+                            <a href="?page={{totalPages}}&sort={{../currentSort}}"
+                                class="mx-3 btn-link d-inline-flex align-items-center">
+                                <span class="fw-medium">End</span>
+                            </a>
+                            {{else}}
+                            <span class="mx-3 btn-link d-inline-flex align-items-center disabled">
+                                <span class="fw-medium">End</span>
+                            </span>
+                            {{/if}}
+                        </ul>
+
+                        <!-- NEXT Button -->
+                        {{#if hasNextPage}}
+                        <a href="?page={{nextPage}}&sort={{../currentSort}}"
+                            class="btn-link d-inline-flex align-items-center">
+                            <span class="fw-medium me-1">NEXT</span>
+                            <svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#icon_next_sm" />
+                            </svg>
+                        </a>
+                        {{else}}
+                        <span class="btn-link d-inline-flex align-items-center disabled">
+                            <span class="fw-medium me-1">NEXT</span>
+                            <svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#icon_next_sm" />
+                            </svg>
+                        </span>
+                        {{/if}}
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bottom-page">
+        <div class="body-text">Copyright © 2024 SilverShop</div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('sort-select').addEventListener('change', function () {
+        document.getElementById('sort-form').submit();
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = {{ currentPage }};
+    const pageLinks = document.querySelectorAll('.pagination .btn-link');
+
+    pageLinks.forEach(link => {
+        const pageNum = parseInt(link.textContent);
+
+        link.classList.remove('page-active');
+        link.classList.add('page-dim');
+
+        if (pageNum === currentPage) {
+            link.classList.add('page-active');
+            link.classList.remove('page-dim');
+        }
+    });
+  });
+</script>
